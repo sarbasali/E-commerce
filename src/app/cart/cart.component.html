@@ -1,0 +1,110 @@
+
+<ng-container *ngIf="products.length !==0">
+    <P class=" text-2xl pl-10 font-sans font-medium pt-6">SHOPPING BAG</P>
+    <hr >
+    <div *ngFor="let i of products"  class="flex flex-col justify-between mt-10 ">
+      
+       
+        <div  class=" flex flex-row mt-5 justify-between mb-9 pl-5 " >
+            
+            <div  class="w-[300px] h-[400px] bg-slate-200 rounded-md  flex flex-row gap-3" >
+                <img src="{{i.image}}" alt="img" class="w-[300px] h-[400px] mix-blend-darken ">
+                <img src="{{i.image2}}" alt="" class="w-[300px] h-[400px] mix-blend-darken  ">
+
+            </div>
+        
+            
+            <div class="flex flex-col pr-6">
+
+                <div class="flex flex-row justify-between w-[1000px]">
+                   <p class="text-xl font-semibold"> {{i.product}}</p>
+                   <button (click)="removecart(i)" class="w-[30px] h-[30px] bg-slate-100 rounded-lg font-extrabold text-xl   ">X</button>
+                </div>
+                <h3>{{i.color}}</h3>
+                 
+                <h3>{{i.category}}</h3>
+                
+                <h3>$ {{i.cartprice}}</h3>
+
+                <div class="flex flex-row gap-4">
+                    <button (click)="lessQnt(i)" class="w-6 h-6 bg-slate-200 text-lg">-</button>
+                    <h3> {{i.quantity}}</h3>
+                    <button (click)="addQnt(i)" class="w-6 h-6 bg-slate-200 text-lg">+</button>
+                </div>
+       
+               
+            </div>
+            
+           
+        </div>
+        <hr >
+    
+              
+     
+    </div>
+  
+    <div class="flex justify-center   border-t-[1px] border-b-[1px] border-black w-screen h-12 mb-7">
+        <p class="font-semibold text-lg pt-3">YOU MAY ALSO LIKE</p>
+
+    </div>
+    <div class="flex justify-center mb-6">
+        <button class="w-[150px] h-[50px] bg-black  text-white  text-base " routerLink="/payment">BuyNow</button>
+    </div>
+
+  
+
+   
+</ng-container> 
+
+<!-- <ng-container *ngIf="products.length>0">
+    <div>
+        <div class="p-5">
+            <table class="w-[1880px] ">
+                <thead class="border-black border-2 text-center h-[55px] text-2xl">
+                   <tr>
+                    <th>Sr.No</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th class="w-[250]">Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                   </tr>
+                </thead>
+                <tbody class="border-black border-2 text-center h-20 text-[18px]">
+                    <tr *ngFor="let i of products;let ind = index" class="text-center">
+                        <td>{{ind+1}}</td>
+                        <td>{{i.title}}</td>
+                        <td><img class="w-[250px] h-[250px]" src="{{i.image}}" alt=""></td>
+                        <th class="w-[250px] overflow-hidden">nice to product</th>
+                        <th>{{i.price}}</th>
+                        <td>{{i.quantity}}kjh</td>
+                        <td>{{i.total}}</td>
+                        <td>
+                            <button (click)="removecart(i)" class="bg-gray-800 p-3 rounded-lg text-white">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+              
+            </table>
+            <td class="flex  justify-end gap-20">
+                <button class="w-20 h-16 bg-blue-950 text-white ">Emtycart</button>
+                <button class="w-20 h-16 bg-blue-950 text-white ">Shop More</button>
+                <button class="w-20 h-16 bg-blue-950 text-white ">Checkout</button>
+            </td>
+        </div>
+    </div>
+</ng-container>-->
+
+ <ng-container *ngIf="products==0">
+    <div class="w-screen h-screen  flex justify-center items-center flex-col gap-3">
+        <img src="../../assets/ee614196afc593ece1e8aabec1cb2820.png" alt="" class="w-[500px] h-[300px]">
+        <p class="text-2xl">Your cart is empty</p>
+        <button class="w-[120px] h-[50px] bg-cyan-600 rounded-xl font-semibold text-white" routerLink="/home">Shop Now</button>
+    
+    </div>
+</ng-container> 
+
+  
+<router-outlet></router-outlet>

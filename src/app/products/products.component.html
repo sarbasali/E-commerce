@@ -1,0 +1,41 @@
+
+
+<div class="grid grid-cols-4  gap-x-[-50px] gap-y-16 mt-[50px] ml-16 mb-10" >
+  <ul *ngFor="let push of postArray" class="w-[400px] h-[650px] bg-slate-300 hover:bg-slate-300 rounded-lg flex  flex-col justify-center  pl-5 shadow-xl shadow-slate-200 hover:shadow-xl hover:shadow-slate-400 ">
+
+    <button class="mx-80" mat-stroked-button (click)="openSnackBar(push)" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+    </svg>
+    
+    
+    </button> 
+     <img src="{{push.image}}" alt="" class="w-[440px] h-[470px] mix-blend-darken  mx-auto mb-4   ">
+     <li class="font-bold">{{push.product}}</li>
+     <li> {{push.category}}</li>
+
+     <li>${{push.price}}</li>
+    
+ 
+     
+
+  </ul>
+</div>
+<div>
+  <!-- <mat-form-field>
+    <mat-label>Snack bar duration (seconds)</mat-label>
+    <input type="number" [(ngModel)]="durationInSeconds" matInput>
+  </mat-form-field> -->
+  
+  <!-- <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+    Pizza party
+  </button> -->
+  
+</div>
+
+
+ <router-outlet></router-outlet> 
+
+
+
+
+ 

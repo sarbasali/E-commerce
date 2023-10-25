@@ -1,0 +1,50 @@
+
+
+
+<div class="w-screen h-screen bg-slate-400 flex  justify-center">
+    <mat-tab-group  >
+        <mat-tab label="Login"  >
+             <div class="mt-3 w-[400px] h-[500px] bg-sky-700 rounded-lg flex flex-col  gap-8 justify-center items-center mx-auto  ">
+
+  
+            <!-- <input type="text " placeholder="Enter Firstname" class="w-[300px] h-[50px] rounded-lg pl-3">
+        
+            
+             <input type="text " placeholder="Enter secondname" class="w-[300px] h-[50px] rounded-lg pl-3"> -->
+        
+             <input type="text" placeholder="Enter email" class="w-[300px] h-[50px] rounded-lg pl-3">
+            <input type="text" placeholder="Enter Password" class="w-[300px] h-[50px] rounded-lg pl-3">
+        
+            <button class="w-[100px] h-9 bg-black text-white rounded-xl " routerLink="/home">Login</button>
+        </div> 
+    </mat-tab>
+
+        <mat-tab label="Sign-up" > 
+            <div class=" mt-3 w-[400px] h-[500px] bg-sky-700 rounded-lg flex flex-col  gap-8 justify-center items-center mx-auto  ">
+
+  
+                <input type="text " placeholder="Enter Firstname" class="w-[300px] h-[50px] rounded-lg pl-3">
+            
+                
+                 <input type="text " placeholder="Enter secondname" class="w-[300px] h-[50px] rounded-lg pl-3">
+            
+                 <input type="text" placeholder="Enter email" class="w-[300px] h-[50px] rounded-lg pl-3">
+                <input type="text" placeholder="Enter Password" class="w-[300px] h-[50px] rounded-lg pl-3">
+            
+                <button class="w-[100px] h-9 bg-black text-white rounded-xl" routerLink="/home">Sign-up</button>
+
+                <div class="flex flex-row">
+                    <input type="checkbox">
+                    <label class="pl-4">Accept all terms & conditions</label>
+                
+                 </div>
+            </div>
+          
+        </mat-tab>
+      
+      </mat-tab-group>
+</div>
+
+
+
+<router-outlet></router-outlet>
